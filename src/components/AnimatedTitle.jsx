@@ -46,7 +46,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
   return (
     <div
       ref={containerRef}
-      className={`flex flex-col gap-1 text-2xl uppercase leading-[.8] text-white sm:px-32 lg:text-6xl ${containerClass}`}
+      className={`flex flex-col gap-1 text-2xl uppercase leading-[.8] text-white sm:px-32 lg:text-7xl ${containerClass}`}
     >
       {title.split("<br />").map((line, index) => (
         <div

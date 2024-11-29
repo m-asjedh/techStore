@@ -24,7 +24,9 @@ const Hero = () => {
           </div>
           <div>
             <h1 className="special-font hero-heading z-40 ">
-              <b>a</b>m<b>a</b>zz<b>a</b>
+              <b>Tech</b>
+              <b>S</b>
+              <b>Tore</b>
             </h1>
           </div>
           <div>
