@@ -23,7 +23,7 @@ const Hero = () => {
             Cutting-Edge Electronics.
           </div>
           <div>
-            <h1 className="special-font hero-heading z-40 ">
+            <h1 className="special-font uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem] z-40 ">
               <b>Tech</b>
               <b>S</b>
               <b>Tore</b>
