@@ -6,8 +6,11 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 import "./styles/ProductCardStyles.css";
 import VanillaTilt from "vanilla-tilt";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ products }) => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const boxes = document.querySelectorAll(".box");
     VanillaTilt.init(boxes, {
@@ -23,10 +26,18 @@ const ProductCard = ({ products }) => {
     };
   }, []);
 
+  const handleProductClick = (id) => {
+    navigate(`/product/${id}`);
+  };
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 sm:px-6 lg:px-8 overflow-x-hidden ">
-      {products.map((item, index) => (
-        <div key={index} className="mx-auto my-8 w-64 cursor-pointer ">
+      {products.map((item) => (
+        <div
+          key={item.id}
+          className="mx-auto my-8 w-64 cursor-pointer  "
+          onClick={() => handleProductClick(item.id)}
+        >
           <div className=" shadow-2xl rounded-lg overflow-hidden relative box text-black ">
             <div className="absolute top-3 right-3  text-lg ">
               <FaGratipay />

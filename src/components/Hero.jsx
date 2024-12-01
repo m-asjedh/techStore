@@ -18,7 +18,7 @@ const Hero = () => {
 
       <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center sm:justify-between p-20  w-full h-full">
         <div className="flex flex-col justify-center items-center sm:items-start text-center sm:text-left space-y-4 mb-6 sm:mb-0 sm:w-1/2">
-          <div className="text-5xl font-bold font-zentry  ">
+          <div className="text-2xl font-bold font-zentry lg:text-4xl  ">
             Your One-Stop Shop for <br />
             Cutting-Edge Electronics.
           </div>

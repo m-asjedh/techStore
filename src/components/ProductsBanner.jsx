@@ -42,7 +42,7 @@ const ProductsBanner = () => {
         <div className="sm:hidden flex flex-col items-center text-blue-50">
           <div className="flex flex-col items-center text-center z-20 mt-10">
             <p className="font-general text-[10px] uppercase">SALE</p>
-            <p className="special-font mt-10 w-full font-zentry text-4xl sm:text-5xl md:text-[6rem] leading-[0.9]">
+            <p className="special-font mt-10 w-full font-zentry text-4xl sm:text-5xl md:text-[6rem] leading-[0.9] !z-10">
               Let&apos;s Shop before <br /> it ends
             </p>
 
