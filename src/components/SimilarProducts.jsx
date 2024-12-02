@@ -2,7 +2,10 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedTitle from "./AnimatedTitle";
-import image from "../assets/buds1.webp";
+import image1 from "../assets/buds1.webp";
+import image2 from "../assets/buds2.webp";
+import image3 from "../assets/buds3.webp";
+import image4 from "../assets/buds4.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +64,7 @@ const SimilarProducts = () => {
         >
           <div className="flex flex-col items-center gap-4">
             <img
-              src={image}
+              src={image1}
               alt="Product 1"
               className="bg-gray-300 w-48 h-48 object-cover rounded-lg shadow-md border-2 border-black"
             />
@@ -78,7 +81,7 @@ const SimilarProducts = () => {
         >
           <div className="flex flex-col items-center gap-4">
             <img
-              src={image}
+              src={image2}
               alt="Product 2"
               className="bg-gray-300 w-48 h-48 object-cover rounded-lg shadow-md border-2 border-black"
             />
@@ -95,7 +98,7 @@ const SimilarProducts = () => {
         >
           <div className="flex flex-col items-center gap-4">
             <img
-              src={image}
+              src={image3}
               alt="Product 3"
               className="bg-gray-300 w-48 h-48 object-cover rounded-md shadow-md border-2 border-black"
             />
@@ -112,7 +115,7 @@ const SimilarProducts = () => {
         >
           <div className="flex flex-col items-center gap-4">
             <img
-              src={image}
+              src={image4}
               alt="Product 4"
               className="bg-gray-300 w-48 h-48 object-cover rounded-md shadow-md border-2 border-black"
             />

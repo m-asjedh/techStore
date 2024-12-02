@@ -5,7 +5,12 @@ import Button from "../components/Button";
 import { FcOk } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
+import { useState } from "react";
+
 const Signin = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -23,6 +28,8 @@ const Signin = () => {
                 type="text"
                 placeholder="Email"
                 className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div className="flex flex-col">
@@ -30,6 +37,8 @@ const Signin = () => {
                 type="password"
                 placeholder="Password"
                 className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>

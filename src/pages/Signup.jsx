@@ -4,8 +4,13 @@ import animationData from "../assets/animations/signupAnimation.json";
 import Button from "../components/Button";
 import { FcOk } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const Signup = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const lottieOptions = {
     loop: true,
     autoplay: true,
@@ -24,6 +29,8 @@ const Signup = () => {
                   type="text"
                   placeholder="Name"
                   className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -31,6 +38,8 @@ const Signup = () => {
                   type="text"
                   placeholder="Email"
                   className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="flex flex-col">
@@ -38,6 +47,8 @@ const Signup = () => {
                   type="password"
                   placeholder="Password"
                   className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
             </div>

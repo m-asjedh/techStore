@@ -1,6 +1,6 @@
 import ProductCard from "../components/ProductCard";
 import ProductsBanner from "../components/ProductsBanner";
-import products from "../utils/products";
+import products from "../utils/data/products";
 
 const Products = () => {
   return (

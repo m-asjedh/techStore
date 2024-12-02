@@ -3,8 +3,8 @@ import { FaCartPlus } from "react-icons/fa6";
 import Button from "./Button";
 import SimilarProducts from "./SimilarProducts";
 import { FaMoneyCheckAlt } from "react-icons/fa";
-import products from "../utils/products.js";
 import { useEffect } from "react";
+import products from "../utils/data/products";
 
 const ProductDetail = () => {
   const { id } = useParams();
