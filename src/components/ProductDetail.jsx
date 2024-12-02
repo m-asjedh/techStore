@@ -4,9 +4,14 @@ import Button from "./Button";
 import SimilarProducts from "./SimilarProducts";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import products from "../utils/products.js";
+import { useEffect } from "react";
 
 const ProductDetail = () => {
   const { id } = useParams();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const product = products.find((item) => item.id === parseInt(id));
 

@@ -72,11 +72,11 @@ const AddCart = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <p className="text-sm text-gray-500">Delivery Address</p>
-            <p className="text-lg font-medium">No 01, Main Street</p>
+            <p className="text-lg font-medium">9/3 Kandy Road, Kengalla</p>
           </div>
           <div>
             <p className="text-sm text-gray-500">Phone Number</p>
-            <p className="text-lg font-medium">+94111111</p>
+            <p className="text-lg font-medium">(+94) 74 114 6366</p>
           </div>
         </div>
       </div>

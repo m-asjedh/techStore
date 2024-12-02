@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div
       id="hero-banner"
-      className="relative z-0 h-screen w-screen overflow-hidden"
+      className="relative z-0 h-screen w-screen overflow-hidden border border-black"
     >
       <video
         autoPlay
@@ -34,7 +34,7 @@ const Hero = () => {
               id="explore-products-btn"
               title="Explore Products"
               leftIcon={<IoListCircle />}
-              containerClass="bg-yellow-300 flex-center gap-1"
+              containerClass="bg-yellow-300 hover:bg-yellow-400 flex-center gap-1"
             />
           </div>
         </div>
