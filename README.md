@@ -49,7 +49,7 @@ A simple React-based e-commerce app that includes user authentication, a shoppin
 
 Follow the instructions below to get the app up and running on your local machine:
 
-1. git clone https://github.com/m-asjedh/techStore.git
-2. cd techStore
+1. ### `git clone https://github.com/m-asjedh/techStore.git`
+2. ### `cd techStore`
 3. npm install
 4. npm run dev
