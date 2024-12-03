@@ -30,8 +30,10 @@ const Signin = () => {
       const { email, password } = values;
       const success = login(email, password);
       if (success) {
-        navigate("/home");
         toast.success("Successfully logged in");
+        setTimeout(() => {
+          navigate("/home");
+        }, 2000);
       } else {
         console.log("Invalid email or password");
         toast.warn("Invalid Credentials");
