@@ -1,52 +1,27 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import { IoMdCloseCircle } from "react-icons/io";
+import { FaCcPaypal, FaCcVisa } from "react-icons/fa6";
+
 const CheckoutModal = ({ closeModal, openConfirmModal }) => {
   const [paymentMethod, setPaymentMethod] = useState("visa");
 
   return (
-    <div className=" flex justify-center items-center bg-black min-h-screen bg-opacity-50 z-50">
-      <div className="relative p-6  w-full mx-10 bg-white rounded-lg shadow-lg border">
-        <button
-          onClick={closeModal}
-          className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
+    <div className="flex justify-center items-center bg-black min-h-screen bg-opacity-50 z-50">
+      <div className="relative p-6 w-full mx-10 bg-white rounded-lg shadow-lg border">
+        <div className="absolute top-2 right-2">
+          <button title="Close" onClick={closeModal}>
+            <IoMdCloseCircle />
+          </button>
+        </div>
 
         <h2 className="text-xl font-bold mb-4 text-center">Checkout</h2>
         <div className="flex justify-around mb-6">
-          <button
-            onClick={() => setPaymentMethod("visa")}
-            className={`py-2 px-4 rounded-md font-medium ${
-              paymentMethod === "visa"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200"
-            }`}
-          >
-            VISA
+          <button onClick={() => setPaymentMethod("visa")} title="Visa">
+            <FaCcVisa color="black" size={40} />
           </button>
-          <button
-            onClick={() => setPaymentMethod("paypal")}
-            className={`py-2 px-4 rounded-md font-medium ${
-              paymentMethod === "paypal"
-                ? "bg-blue-500 text-white"
-                : "bg-gray-200"
-            }`}
-          >
-            PayPal
+          <button onClick={() => setPaymentMethod("paypal")} title="PayPal">
+            <FaCcPaypal color="black" size={40} />
           </button>
         </div>
 
@@ -103,12 +78,14 @@ const CheckoutModal = ({ closeModal, openConfirmModal }) => {
           </div>
         )}
 
-        <button
-          onClick={openConfirmModal}
-          className="w-full bg-blue-500 text-white py-2 rounded-md font-medium hover:bg-blue-600"
-        >
-          Pay
-        </button>
+        <div className="flex justify-center">
+          <button
+            onClick={openConfirmModal}
+            className="bg-blue-500 text-white  px-10 rounded-3xl "
+          >
+            Pay
+          </button>
+        </div>
       </div>
     </div>
   );

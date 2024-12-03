@@ -2,14 +2,17 @@ import { MdDelete, MdEdit } from "react-icons/md";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
 
 const AccountDetails = () => {
   const navigate = useNavigate();
 
   const { logout } = useAuth();
+  const { removeAllItems } = useCart();
 
   const handleLogout = () => {
     logout();
+    removeAllItems();
     navigate("/signin");
   };
 

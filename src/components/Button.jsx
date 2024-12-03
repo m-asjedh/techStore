@@ -14,7 +14,7 @@ const Button = ({
       type={type}
       onClick={onClick}
       id={id}
-      className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-50 px-7 py-3 text-black ${containerClass}`}
+      className={`group relative z-10 w-fit cursor-pointer overflow-hidden rounded-full bg-violet-200 px-7 py-3 text-black ${containerClass}`}
     >
       <div className="flex items-center gap-2">
         {leftIcon}

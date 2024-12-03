@@ -18,7 +18,7 @@ const ProductsBanner = () => {
       <div className="relative rounded-lg bg-black text-blue-50 sm:overflow-hidden min-h-[600px]">
         <div className="absolute inset-0 hidden sm:block">
           <div className="absolute top-10 left-0 right-0 flex flex-col items-center text-center z-20">
-            <p className="font-general text-[10px] uppercase">SALE</p>
+            <p className="font-general text-[20px] uppercase">SALE</p>
             <p className="special-font mt-10 w-full font-zentry text-4xl sm:text-5xl md:text-[6rem] leading-[0.9]">
               Let&apos;s Shop before <br /> it ends
             </p>
