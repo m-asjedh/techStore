@@ -3,13 +3,30 @@ import Lottie from "react-lottie";
 import animationData from "../assets/animations/signupAnimation.json";
 import Button from "../components/Button";
 import { FcOk } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext.jsx";
 
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const { register } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignup = () => {
+    if (!name || !email || !password) {
+      console.log("All fields are required.");
+      return;
+    }
+    try {
+      register(name, email, password);
+      navigate("/signin");
+    } catch (error) {
+      console.log("Error while registering user", error);
+    }
+  };
 
   const lottieOptions = {
     loop: true,
@@ -56,6 +73,7 @@ const Signup = () => {
               title="Sign Up"
               containerClass="bg-blue-600 hover:bg-blue-400 text-sm"
               rightIcon={<FcOk />}
+              onClick={handleSignup}
             />
             <p className="text-center text-gray-500 my-4">
               Or Sign up with social platforms

@@ -37,23 +37,17 @@ const Checkout = () => {
   return (
     <div>
       <ToastContainer />
-
-      {/* Checkout Modal */}
       {isCheckoutModalOpen && (
         <CheckoutModal
           closeModal={handleCloseCheckoutModal}
           openConfirmModal={handleOpenPaymentConfirmModal}
         />
       )}
-
-      {/* Confirmation Modal */}
       {isConfirmationModalOpen && (
         <PaymentCloseModal
           closeConfirmationModal={handleCloseConfirmationModal}
         />
       )}
-
-      {/* Payment Confirmation Modal */}
       {isPaymentConfirmModalOpen && (
         <PaymentConfirmModal
           closeConfirmModal={handleClosePaymentConfirmModal}

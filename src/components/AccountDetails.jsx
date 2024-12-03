@@ -1,11 +1,15 @@
 import { MdDelete, MdEdit } from "react-icons/md";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const AccountDetails = () => {
   const navigate = useNavigate();
 
-  const handleSignOut = () => {
+  const { logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
     navigate("/signin");
   };
 
@@ -46,7 +50,7 @@ const AccountDetails = () => {
               <span>Privacy Settings</span>
             </li>
             <li
-              onClick={handleSignOut}
+              onClick={handleLogout}
               className="flex items-center space-x-3 text-red-500 font-medium"
             >
               <span className="w-5 h-5 bg-red-100 rounded-full flex items-center justify-center">

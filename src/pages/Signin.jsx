@@ -3,18 +3,34 @@ import Lottie from "react-lottie";
 import animationData from "../assets/animations/signinAnimation.json";
 import Button from "../components/Button";
 import { FcOk } from "react-icons/fc";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useAuth } from "../context/AuthContext.jsx";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const { login } = useAuth();
+  const navigate = useNavigate();
+
   const lottieOptions = {
     loop: true,
     autoplay: true,
     animationData: animationData,
+  };
+
+  const handleSignin = () => {
+    if (!email || !password) {
+      console.log("All fields are required.");
+      return;
+    }
+    const success = login(email, password);
+    if (success) {
+      navigate("/home");
+    } else {
+      console.log("Invalid email or password");
+    }
   };
 
   return (
@@ -46,6 +62,7 @@ const Signin = () => {
             title="Sign In"
             containerClass="bg-blue-600 hover:bg-blue-400 text-sm"
             rightIcon={<FcOk />}
+            onClick={handleSignin}
           />
           <p className="text-center text-gray-500 my-4">
             Or Sign in with social platforms
