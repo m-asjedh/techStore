@@ -51,5 +51,5 @@ Follow the instructions below to get the app up and running on your local machin
 
 1. ### `git clone https://github.com/m-asjedh/techStore.git`
 2. ### `cd techStore`
-3. npm install
-4. npm run dev
+3. ### `npm install`
+4. ### `npm run dev`
