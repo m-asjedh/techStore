@@ -53,3 +53,9 @@ Follow the instructions below to get the app up and running on your local machin
 2. ### `cd techStore`
 3. ### `npm install`
 4. ### `npm run dev`
+
+
+## 🛠️ **Video of Using the application**
+https://github.com/user-attachments/assets/768f0489-6453-4b7d-bf55-94b10d73696d
+
+
