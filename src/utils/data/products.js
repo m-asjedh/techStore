@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     productName: "Sony WF-1000XM4",
-    price: 280,
+    price: 300,
     brand: "Sony",
     category: "Buds",
     image: "/src/assets/buds1.webp",
@@ -13,7 +13,7 @@ const products = [
   {
     id: 2,
     productName: "Apple AirPods Pro 2",
-    price: 250,
+    price: 200,
     brand: "Apple",
     category: "Buds",
     image: "/src/assets/buds2.webp",
@@ -24,7 +24,7 @@ const products = [
   {
     id: 3,
     productName: "Samsung Galaxy Buds2 Pro",
-    price: 230,
+    price: 200,
     brand: "Samsung",
     category: "Buds",
     image: "/src/assets/buds3.webp",
@@ -46,9 +46,9 @@ const products = [
 
   {
     id: 5,
-    productName: "Beats Flex Wireless Earphones",
-    price: 70,
-    brand: "Beats",
+    productName: "Sony Flex Wireless Earphones",
+    price: 100,
+    brand: "Sony",
     category: "Earphones",
     image: "/src/assets/earphones1.webp",
     description:
@@ -57,9 +57,9 @@ const products = [
   },
   {
     id: 6,
-    productName: "Bose SoundSport Wireless",
-    price: 150,
-    brand: "Bose",
+    productName: "Apple SoundSport Wireless",
+    price: 100,
+    brand: "Apple",
     category: "Earphones",
     image: "/src/assets/earphones2.webp",
     description:
@@ -69,7 +69,7 @@ const products = [
   {
     id: 7,
     productName: "OnePlus Bullets Wireless Z2",
-    price: 60,
+    price: 100,
     brand: "OnePlus",
     category: "Earphones",
     image: "/src/assets/earphones3.webp",
@@ -79,9 +79,9 @@ const products = [
   },
   {
     id: 8,
-    productName: "Sennheiser CX 350BT",
-    price: 100,
-    brand: "Sennheiser",
+    productName: "Samsung CX 350BT",
+    price: 400,
+    brand: "Samsung",
     category: "Earphones",
     image: "/src/assets/earphones4.webp",
     description:
@@ -92,7 +92,7 @@ const products = [
   {
     id: 9,
     productName: "Sony WH-1000XM5",
-    price: 350,
+    price: 400,
     brand: "Sony",
     category: "Headphones",
     image: "/src/assets/headphones1.webp",
@@ -103,7 +103,7 @@ const products = [
   {
     id: 10,
     productName: "Bose QuietComfort 45",
-    price: 330,
+    price: 500,
     brand: "Bose",
     category: "Headphones",
     image: "/src/assets/headphones2.webp",
@@ -113,9 +113,9 @@ const products = [
   },
   {
     id: 11,
-    productName: "Sennheiser HD 450BT",
-    price: 200,
-    brand: "Sennheiser",
+    productName: "Samsung HD 450BT",
+    price: 500,
+    brand: "Samsung",
     category: "Headphones",
     image: "/src/assets/headphones3.webp",
     description:
@@ -126,7 +126,7 @@ const products = [
   {
     id: 12,
     productName: "JBL Flip 6",
-    price: 130,
+    price: 200,
     brand: "JBL",
     category: "Speakers",
     image: "/src/assets/speaker1.webp",
@@ -136,9 +136,9 @@ const products = [
   },
   {
     id: 13,
-    productName: "Ultimate Ears BOOM 3",
-    price: 150,
-    brand: "Ultimate Ears",
+    productName: "Sony Ears BOOM 3",
+    price: 300,
+    brand: "Sony",
     category: "Speakers",
     image: "/src/assets/speaker2.webp",
     description:
@@ -149,7 +149,7 @@ const products = [
   {
     id: 14,
     productName: "Samsung Galaxy Watch 5",
-    price: 300,
+    price: 400,
     brand: "Samsung",
     category: "Watches",
     image: "/src/assets/watch1.webp",
@@ -170,9 +170,9 @@ const products = [
   },
   {
     id: 16,
-    productName: "Fitbit Versa 4",
-    price: 230,
-    brand: "Fitbit",
+    productName: "Samsung Versa 4",
+    price: 100,
+    brand: "Samsung",
     category: "Watches",
     image: "/src/assets/watch3.webp",
     description:
@@ -183,7 +183,7 @@ const products = [
   {
     id: 17,
     productName: "Sony LinkBuds S",
-    price: 180,
+    price: 500,
     brand: "Sony",
     category: "Wireless Earphones",
     image: "/src/assets/wireless_earphones1.webp",
@@ -193,9 +193,9 @@ const products = [
   },
   {
     id: 18,
-    productName: "Anker Soundcore Liberty Air 2 Pro",
-    price: 130,
-    brand: "Anker",
+    productName: "Samsung Soundcore Liberty Air 2 Pro",
+    price: 300,
+    brand: "Samsung",
     category: "Wireless Earphones",
     image: "/src/assets/wireless_earphones2.webp",
     description:
@@ -204,9 +204,9 @@ const products = [
   },
   {
     id: 19,
-    productName: "Jabra Elite 75t",
-    price: 150,
-    brand: "Jabra",
+    productName: "JBL Elite 75t",
+    price: 100,
+    brand: "JBL",
     category: "Wireless Earphones",
     image: "/src/assets/wireless_earphones3.webp",
     description:

@@ -7,6 +7,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useFormik } from "formik";
 import { signupValidationSchema } from "../schema/index.js";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Signup = () => {
   const { register } = useAuth();
@@ -27,11 +29,13 @@ const Signup = () => {
     validationSchema: signupValidationSchema,
     onSubmit: (values) => {
       const { name, email, password } = values;
-      const success = register(name, email, password);
-      if (success) {
+      try {
+        register(name, email, password);
         navigate("/signin");
-      } else {
-        console.log("Error while registering user");
+        toast.success("Successfully registered");
+      } catch (error) {
+        console.error("Error during registration:", error);
+        toast.warn("Please try again");
       }
     },
   });
