@@ -13,6 +13,7 @@ import Signup from "./pages/Signup.jsx";
 import Account from "./pages/Account.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
+import ProtectedRoute from "./utils/ProtectedRoutes.jsx";
 
 const router = createBrowserRouter([
   {
@@ -29,27 +30,51 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
-        element: <Home />,
+        element: (
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/products",
-        element: <Products />,
+        element: (
+          <ProtectedRoute>
+            <Products />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/product/:id",
-        element: <ProductDetail />,
+        element: (
+          <ProtectedRoute>
+            <ProductDetail />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: (
+          <ProtectedRoute>
+            <Cart />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/checkout",
-        element: <Checkout />,
+        element: (
+          <ProtectedRoute>
+            <Checkout />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/account",
-        element: <Account />,
+        element: (
+          <ProtectedRoute>
+            <Account />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

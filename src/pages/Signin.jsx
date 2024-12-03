@@ -4,13 +4,11 @@ import animationData from "../assets/animations/signinAnimation.json";
 import Button from "../components/Button";
 import { FcOk } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
 import { useAuth } from "../context/AuthContext.jsx";
+import { useFormik } from "formik";
+import { signinValidationSchema } from "../schema/index.js";
 
 const Signin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -20,50 +18,70 @@ const Signin = () => {
     animationData: animationData,
   };
 
-  const handleSignin = () => {
-    if (!email || !password) {
-      console.log("All fields are required.");
-      return;
-    }
-    const success = login(email, password);
-    if (success) {
-      navigate("/home");
-    } else {
-      console.log("Invalid email or password");
-    }
-  };
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+      password: "",
+    },
+    validationSchema: signinValidationSchema,
+    onSubmit: (values) => {
+      const { email, password } = values;
+      const success = login(email, password);
+      if (success) {
+        navigate("/home");
+      } else {
+        console.log("Invalid email or password");
+      }
+    },
+  });
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100 ">
-      <div className="bg-white lg:mx-20  rounded-lg shadow-lg grid grid-cols-1 lg:grid-cols-2 gap-8  border border-black">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="bg-white lg:mx-20 rounded-lg shadow-lg grid grid-cols-1 lg:grid-cols-2 gap-8 border border-black">
         <div className="flex flex-col justify-center items-center space-y-6 p-4">
-          <h2 className="text-3xl font-general text-center">Sign In </h2>
-          <div className="space-y-4 w-full">
+          <h2 className="text-3xl font-general text-center">Sign In</h2>
+          <form onSubmit={formik.handleSubmit} className="space-y-4 w-full">
             <div className="flex flex-col">
               <input
                 type="text"
+                name="email"
                 placeholder="Email"
                 className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
+              {formik.touched.email && formik.errors.email && (
+                <p className="text-red-500 text-sm mt-1">
+                  {formik.errors.email}
+                </p>
+              )}
             </div>
             <div className="flex flex-col">
               <input
                 type="password"
+                name="password"
                 placeholder="Password"
-                className="p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                className="p-3  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
+                value={formik.values.password}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.password && formik.errors.password && (
+                <p className="text-red-500 text-sm mt-1">
+                  {formik.errors.password}
+                </p>
+              )}
+            </div>
+            <div className="flex justify-center items-center mt-5">
+              <Button
+                type="submit"
+                title="Sign In"
+                containerClass="bg-blue-600 hover:bg-blue-400 text-sm"
+                rightIcon={<FcOk />}
               />
             </div>
-          </div>
-          <Button
-            title="Sign In"
-            containerClass="bg-blue-600 hover:bg-blue-400 text-sm"
-            rightIcon={<FcOk />}
-            onClick={handleSignin}
-          />
+          </form>
           <p className="text-center text-gray-500 my-4">
             Or Sign in with social platforms
           </p>
@@ -81,7 +99,7 @@ const Signin = () => {
           </p>
         </div>
 
-        <div className="flex justify-center items-center bg-black ">
+        <div className="flex justify-center items-center bg-black">
           <Lottie options={lottieOptions} />
         </div>
       </div>
